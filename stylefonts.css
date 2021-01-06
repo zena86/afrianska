@@ -1,0 +1,13 @@
+@font-face {
+	font-family: "Galien";
+	src: url("fonts/Galien.woff"),
+	url("fonts/Galien.woff2"),
+    url("fonts/Galien.ttf"),
+    url("fonts/Galien.eot");
+}
+@font-face {
+	font-family: "Gilroylight";
+	src: url("fonts/Gilroylight.woff"),
+	url("fonts/Gilroylight.woff2"),
+    url("fonts/Gilroylight.ttf");
+}
