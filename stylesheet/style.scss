@@ -40,6 +40,33 @@ $scotch-colors: (
 
 //Общее
 
+html, body {
+    height: 100%;
+}
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+}
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;  
+//	background-color: orange;
+}
+.main-screen {
+    flex: 1 0 100%;
+//	background-color: chartreuse;
+	margin-bottom: 192px;
+	padding-top: 128px;
+	@media(max-width : 768px) {
+		margin-bottom: 50px;
+		padding-top: 88px;
+	}
+}
 .container {
     max-width: 940px;
     margin: 0 auto;
@@ -61,93 +88,6 @@ $scotch-colors: (
         padding: 0 20px; 
     }  
 } 
-
-/*HEADER*/
-
-.face_cont {
-	position: relative;
-	margin-bottom: 190px;
-	@media(max-width: 768px){
-		margin-bottom: 50px;
-	}
-}
-.face {
-	position: relative;
-	max-width: 1220px;
-	margin: 0 auto;
-}
-.face_bg-grad {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
-	opacity: 0.2;
-}
-.header {
-	position: fixed;
-	width: 100%;
-	height: 88px;
-	top: 0;
-	padding-top: 40px;
-	background-color: #fff;	
-	z-index: 50;
-	@media(max-width : 768px) {
-		padding-top: 20px;
-		height: 68px;
-	}
-}
-.header_body {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.face_content {
-	padding-bottom: 13vw;
-	padding-top: 10vw;
-	@media(max-width : 768px) {
-		padding-top: 85px;
-		padding-bottom: 100px;
-	}
-}
-.face_title {
-	max-width: 520px;
-	margin-bottom: 30px;
-	font-family: "Galien", serif;
-	font-size: 64px;
-	line-height: 116%;
-	letter-spacing: 0.04em;
-	color: scotch-color('blue_01');
-	@media(max-width : 768px) {
-		font-size: 45px;
-		line-height: 100%;
-	}
-}
-.face_text {
-	max-width: 425px;
-	margin-bottom: 70px;
-	@media(max-width : 768px) {
-		margin-bottom: 40px;
-	}
-}
-.face_pic {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 50%;
-	height: 100%;
-	background-image: url(images/face-pic.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: right center;
-	@media(max-width : 768px) {
-		background-position: right bottom;
-	}
-}
-
-/*Общие*/
-
 .btn {
 	position: relative;
 	z-index: 30;
@@ -212,6 +152,55 @@ $scotch-colors: (
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
+}
+
+/*HEADER*/
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 88px;
+	top: 0;
+	padding-top: 40px;
+	background-color: #fff;	
+	z-index: 50;
+}
+.header_body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.face {
+	background-image: url(images/face.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.face_content {
+	position: relative;
+//	background-color: violet;
+	height: calc(100vh - 128px);
+	display: flex;
+	align-items: center;
+}
+.face__inner {
+//	padding: 11vw 0 11.6vw;
+//	background-color: yellow;
+	max-width: 520px;
+	
+//	height: 100%;
+}
+.face_title {
+	margin-bottom: 30px;
+	font-family: "Galien", serif;
+	font-size: 64px;
+	line-height: 116%;
+	letter-spacing: 0.04em;
+	color: scotch-color('blue_01');
+}
+.face_text {
+	max-width: 425px;
+	margin-bottom: 70px;
 }
 
 /*Advantages*/
@@ -329,7 +318,7 @@ $scotch-colors: (
 /*Projects*/
 
 .projects {
-	width: 100vw;
+//	width: 100%;
 	margin-bottom: 100px;
 	@media(max-width: 768px){
 		margin-bottom: 0;
@@ -459,7 +448,6 @@ $scotch-colors: (
 /*Clients*/
 
 .clients {
-	width: 100%;
 	background-color: scotch-color('blue_04');
 	border-radius: 200px 0px 0px 0px;
 	padding-top: 96px;
@@ -535,7 +523,7 @@ $scotch-colors: (
 
 .footer {
 	background-color: scotch-color('blue_04');
-	width: 100vw;
+//	width: 100%;
 }
 .footer__bg {
 	background-color: scotch-color('blue_02');
